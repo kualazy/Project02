@@ -73,4 +73,5 @@ class PromotionController extends Controller
         Promotion::find($id)->delete();
         return redirect()->back();
     }
+    
 }

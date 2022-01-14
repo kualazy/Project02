@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
+use App\Promotion;
+use App\Job;
 
 class ProductController extends Controller
 {
@@ -74,5 +76,10 @@ class ProductController extends Controller
     {
         Product::find($id)->delete();
         return redirect()->back();
+    }
+
+    public function showproduct(){
+        return view('welcome')->with('product',Product::all())->with('promotion',Promotion::all())->with('job',Job::all());
+        
     }
 }

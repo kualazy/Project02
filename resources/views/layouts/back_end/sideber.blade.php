@@ -47,7 +47,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">โปรโมชั่น</span>
+            <span class="nav-link-text ms-1">แก้ไขข้อมูลพื้นหลังหน้าบ้าน</span>
           </a>
         </li>
 
@@ -68,7 +68,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">แก้ไขข้อมูลพื้นหลังหน้าบ้าน</span>
+            <span class="nav-link-text ms-1">โปรโมชั่น</span>
           </a>
         </li>
 

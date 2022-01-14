@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Product;
+use App\Promotion;
+use App\Job;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,19 +15,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //ลิงค์หน้าบ้าน
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' ,'Admin\ProductController@showproduct');
 Route::get('/benefit', function () {
-    return view('benefit');
+    return view('benefit')->with('product',Product::all())->with('promotion',Promotion::all())->with('job',Job::all());
 });
 Route::get('/product', function () {
-    return view('product');
+    return view('product')->with('product',Product::all())->with('promotion',Promotion::all())->with('job',Job::all());
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact')->with('promotion',Promotion::all());
 });
 //ปิดลิงค์หน้าบ้าน
+
+//font-end
+//product
+Route::get('product/index', 'Admin\ProductController@showproduct')->name('show.product');
+//end
+
+//job
+//Route::get('job/index', 'Admin\JobController@showjob')->name('show.job');
+//end
+//จบ font-end
 
 // ระบบ Authentication
 Auth::routes();

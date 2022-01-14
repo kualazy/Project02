@@ -4,9 +4,9 @@
 
 <body>
 
-
-@include ('layouts.front_end.head')
   
+@include ('layouts.front_end.head')
+
 
   <!-- ======= Hero Section ======= -->
  
@@ -63,6 +63,7 @@
           </div>
         </div>
       </div>
+     
       <hr>
     </section>
     <!-- End About Us Section -->
@@ -74,18 +75,18 @@
 
         <div class="section-title">
           <h2>Product</h2>
-            </div>
-
+        @foreach ($product as $products)
+            
         
+           
 
         <div class="row portfolio-container">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{{asset('front_end/assets/img/Product/sile1.jpg')}}" class="img-fluid" alt="">
+              <img src="{{ $products->image }}" width="150px" alt="">
               <div class="portfolio-info">
-                <h4>ข้าวหมากโบราณ</h4>
-                <p>ราคา 10 บาท</p>
+                <h4>{{ $products->name }}</h4>
+                <p>{{ $products->price }}</p>
                 <div class="portfolio-links">
                   <a href="{{asset('front_end/assets/img/Product/sile1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
                   <a href="Product-detil.php" title="More Details"><i class="bx bx-link"></i></a>
@@ -93,89 +94,10 @@
               </div>
             </div>
           </div>
+       
+          @endforeach
 
-
-      
-
-          <div class="row portfolio-container">
-
-<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-  <div class="portfolio-wrap">
-    <img src="{{asset('front_end/assets/img/Product/sile1.jpg')}}" class="img-fluid" alt="">
-    <div class="portfolio-info">
-      <h4>ข้าวหมากโบราณ</h4>
-      <p>ราคา 10 บาท</p>
-      <div class="portfolio-links">
-        <a href="{{asset('front_end/assets/img/Product/sile1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-        <a href="Product-detil.php" title="More Details"><i class="bx bx-link"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{{asset('front_end/assets/img/Product/sile1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ข้าวหมากโบราณ</h4>
-                <p>ราคา 10 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('front_end/assets/img/Product/sile1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                  <a href="Product-detil.php" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{{asset('front_end/assets/img/Product/sile1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ข้าวหมากโบราณ</h4>
-                <p>ราคา 10 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('front_end/assets/img/Product/sile1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                  <a href="Product-detil.php" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{{asset('front_end/assets/img/Product/sile1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ข้าวหมากโบราณ</h4>
-                <p>ราคา 10 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('front_end/assets/img/Product/sile1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                  <a href="Product-detil.php" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{{asset('front_end/assets/img/Product/sile1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ข้าวหมากโบราณ</h4>
-                <p>ราคา 10 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('front_end/assets/img/Product/sile1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                  <a href="Product-detil.php" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
         
     </section><!-- End Why Us Section -->
 
