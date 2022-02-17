@@ -9,7 +9,7 @@
         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">โปรโมชั่น</li>
       </ol>
-      <h6 class="font-weight-bolder mb-0">โปรโมชั่น</h6>
+      <h5 class="font-weight-bolder mb-0">โปรโมชั่น</h5>
     </nav>
   
   
@@ -35,9 +35,9 @@
     <a href="{{ route('admin.addjob') }}" class="btn btn-primary">เพิ่มข้อมูล</a>
 
 <div class="table-responsive">
-  <table class="table">
+  <table class="table table-dark">
     <thead>
-      <tr>
+      <tr >
         <th>ลำดับ</th>
         <th>ชื่อ</th>
         <th>รูปภาพ</th>
@@ -48,7 +48,7 @@
     </thead>
     <tbody>
       @foreach($jobs as $job)
-      <tr>
+      <tr class=" table-light align-middle text-center">
         <td>{{ $job->id }}</td>
         <td>{{ $job->name }}</td>
         <td><img src="{{ $job->image }}" width="150px" alt=""></td>

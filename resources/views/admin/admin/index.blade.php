@@ -12,7 +12,7 @@
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">หน้า</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">หน้าแรก</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">หน้าแรก</h6>
+          <h5 class="font-weight-bolder mb-0">หน้าแรก</h5>
         </nav>
 
         </ul>
@@ -31,12 +31,12 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">ผู้ใช้</p>
                     <h5 class="font-weight-bolder mb-0">
-                      2,300 คน
+                      {{$users->count()}} คน
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                  <div class="icon icon-shape bg-gradient-success shadow text-center border-radius-md">
                     <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -44,27 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">ประเภทสินค้า</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      3,462 ชิ้น
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="col-xl-3 col-sm-6">
           <div class="card">
             <div class="card-body p-3">
@@ -73,12 +53,12 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">จำนวนสินค้า</p>
                     <h5 class="font-weight-bolder mb-0">
-                      103,430 ชิ้น
+                      {{$product->count()}} ชิ้น
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                  <div class="icon icon-shape bg-gradient-success shadow text-center border-radius-md">
                     <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -87,25 +67,31 @@
           </div>
         </div>
       </div>
+<br>
 
       <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>ลำดับ</th>
-              <th>ชื่อ</th>
-              <th>ที่อยู่</th>
-              <th>E-mail</th>
-              <th>เบอร์โทร</th>
-              <th>Admin - User</th>
-              <th>รูป</th>
+        <table class="table ">
+          <thead class="">
+            <tr class=" table-dark align-middle text-center">
 
 
+
+              <th scope="col">ลำดับ</th>
+              <th scope="col">ชื่อ</th>
+              <th scope="col">ที่อยู่</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">เบอร์โทร</th>
+              <th scope="col">Admin - User</th>
+              <th scope="col">รูป</th>
+          
             </tr>
           </thead>
+          
           <tbody>
+            
+              
             @foreach($users as $user)
-            <tr>
+            <tr class=" table-light align-middle text-center">
               <td>{{ $user->id }}</td>
               <td>{{ $user->name }}</td>
               <td>{{ $user->address }}</td>

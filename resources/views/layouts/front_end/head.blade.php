@@ -1,19 +1,21 @@
+
+   
 <section id="hero">
+
+  
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
-@foreach ($promotion as $item)
-    
 
+        @foreach($promotion as $key => $pm)
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url({{ $item->image }})">
+        <div class="carousel-item @if($key === 0) active @endif" style="background-image: url(front_end/assets/img/slide/sile1.jpg)">
           <div class="carousel-container">
             <div class="container">
-
-              <h2 class="animate__animated animate__fadeInDown">{{ $item->name }} <span></span></h2>
-              <p class="animate__animated animate__fadeInUp">{{ $item->content }}</p>
+              <h2 class="animate__animated animate__fadeInDown">{{ $pm->name }} <span></span></h2>
+              <p class="animate__animated animate__fadeInUp">{{ $pm->content }}</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
@@ -33,4 +35,3 @@
     </div>
   </section><!-- End Hero -->
   <div class="Herohr"><hr size="100px"></div>
-  

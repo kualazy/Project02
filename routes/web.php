@@ -14,6 +14,13 @@ use App\Job;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//starstorage
+Route::get('/call-storage', function(){
+    \Illuminate\Support\Facades\Artisan::call('storage:link');
+    return redirect()->back();
+});
+//endstorage
+
 //ลิงค์หน้าบ้าน
 Route::get('/' ,'Admin\ProductController@showproduct');
 Route::get('/benefit', function () {

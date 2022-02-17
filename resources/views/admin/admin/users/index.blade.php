@@ -8,7 +8,7 @@
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">ผู้ใช้งานระบบ</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">ผู้ใช้งานระบบ</h6>
+          <h5 class="font-weight-bolder mb-0">ผู้ใช้งานระบบ</h5>
         </nav>
               
      <!-- Navbar -->
@@ -33,9 +33,9 @@
               <!-- <a href="{{ route('admin.addemployee') }}" class="btn btn-primary">เพิ่มข้อมูล</a> -->
 
               <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
+                <table class="table table-dark text-center">
+                  <thead table-dark>
+                    <tr table-dark>
                       <th>ลำดับ</th>
                       <th>ชื่อ</th>
                       <th>ที่อยู่</th>
@@ -50,7 +50,7 @@
     </thead>
     <tbody>
       @foreach($users as $user)
-      <tr>
+      <tr class=" table-light align-middle text-center" >
         <td>{{ $user->id }}</td>
         <td>{{ $user->name }}</td>
         <td>{{ $user->address }}</td>

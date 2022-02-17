@@ -19,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/promotion' ,[\App\Http\Controllers\Api\PromotionApiController::class, 'index'] );
+
+Route::get('/product' ,[\App\Http\Controllers\Api\ProductApiController::class, 'index'] );
+
+Route::get('/user' ,[\App\Http\Controllers\Api\UserApiController::class, 'index'] );

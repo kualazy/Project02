@@ -1,7 +1,6 @@
 @include ('layouts.back_end.head')
 
 <body class="g-sidenav-show  bg-gray-100">
-  <!-- @include ('layouts.back_end.sideber') -->
 
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
     <!-- Navbar -->
@@ -79,7 +78,7 @@
                 </div>
                 <div class="col-md-4 text-end">
                   <a href="javascript:;">
-                    <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
+                   
                   </a>
                 </div>
               </div>
@@ -96,7 +95,7 @@
                 <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">phone:</strong> &nbsp; {{Auth()->user()->phone}}</li>
                 <li class="list-group-item border-0 ps-0 pb-0">
                   @if(auth()->user()->isAdmin)
-                  <a href="{{route('admin.index')}}" class="btn btn-primary">Product Mananment</a>
+                  <a href="{{route('admin.index')}}" class="btn btn-primary">หลังบ้าน</a>
                   @endif
                   <a href="{{url('/')}}" class="btn btn-success">Home</a>
                   <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault();

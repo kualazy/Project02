@@ -79,7 +79,14 @@ class ProductController extends Controller
     }
 
     public function showproduct(){
-        return view('welcome')->with('product',Product::all())->with('promotion',Promotion::all())->with('job',Job::all());
+
+        $product = Product::all();
+
+        $promotion = Promotion::all();
+
+        $job = Job::all();
+
+        return view('welcome', compact('product', 'promotion','job'));
         
     }
 }

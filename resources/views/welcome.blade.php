@@ -1,10 +1,5 @@
-
 @include ('layouts.front_end.header')
-
-
 <body>
-
-  
 @include ('layouts.front_end.head')
 
 
@@ -83,7 +78,7 @@
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{{ $products->image }}" width="150px" alt="">
+              <img src="{{ $products->image }}" width="550px" alt="">
               <div class="portfolio-info">
                 <h4>{{ $products->name }}</h4>
                 <p>{{ $products->price }}</p>

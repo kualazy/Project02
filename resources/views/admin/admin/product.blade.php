@@ -10,7 +10,7 @@
           <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
           <li class="breadcrumb-item text-sm text-dark active" aria-current="page">สินค้า</li>
         </ol>
-        <h6 class="font-weight-bolder mb-0">สินค้า</h6>
+        <h5 class="font-weight-bolder mb-0">สินค้า</h5>
       </nav>
 
       <!-- Navbar -->
@@ -37,7 +37,7 @@
   <div class="table-responsive">
     <table class="table">
       <thead>
-        <tr>
+        <tr class=" table-dark align-middle text-center">
           <th>ลำดับ</th>
           <th>ชื่อสินค้า</th>
           <th>รหัสสินค้า</th>
@@ -50,7 +50,7 @@
       </thead>
       <tbody>
         @foreach($products as $product)
-        <tr>
+        <tr class=" table-light align-middle text-center">
           <td>{{ $product->id_product }}</td>
           <td>{{ $product->name }}</td>
           <td>{{ $product->product_code }}</td>

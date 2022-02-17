@@ -4,15 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Product;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index(){
-        $users = User::get();
-        return view('admin.admin.users.index', [
-            'users' => $users
-        ]);
+        return view('admin.admin.users.index')->with('users',User::get());
     }
 
     public function add()
